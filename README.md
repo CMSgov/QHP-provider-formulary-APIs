@@ -40,7 +40,7 @@ Health Plans - plans.json
 | **plan_id_type**               | ID Type                  | Type of Plan ID. The preferred is the HIOS Plan ID - `HIOS-PLAN-ID`  | Always   |
 | **plan_id**                         | Unique Identifier        | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.) | Always   |
 | **marketing_name**             | Marketing Name           | The name of the plan as it is displayed on HealthCare.gov                                                  | Always   |
-| **summary_url**              | URL for Plan Information | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.          | Yes       |
+| **summary_url**              | URL for Plan Information | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.          | Always       |
 | **marketing_url**              | URL for Plan Information | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.          | No       |
 | **plan_contact**              | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.          | Always       |
 | **network**                | Network                 | Array of networks                                                                                          | Always   |
