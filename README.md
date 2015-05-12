@@ -311,7 +311,7 @@ Drugs - drugs.json
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
-                "plan_id": "56748XXX123933",
+                "plan_id": "56748XX1239330",
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
@@ -333,7 +333,7 @@ Drugs - drugs.json
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
-                "plan_id": "56748XXX123933",
+                "plan_id": "56748XX1239330",
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
