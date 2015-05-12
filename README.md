@@ -205,7 +205,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
 [
     {
         "npi": "1234567890123456",
-        "type": "individual",
+        "type": "INDIVIDUAL",
         "name": {
             "first": "Sarah",
             "middle": "Maya",
@@ -237,7 +237,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
     },
     {
         "npi": "1234567890123949",
-        "type": "facility",
+        "type": "FACILITY",
         "facility_name": "Main Street Hospital",
         "facility_type": "Hospital",
         "address": {
