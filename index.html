@@ -1,67 +1,38 @@
-<!doctype html>
-<!--
-
-  Instructions:
-
-  - Save this file.
-  - Replace "USER" with your GitHub username.
-  - Replace "REPO" with your GitHub repo name.
-  - Replace "Your Project" with your project name.
-  - Upload this file (or commit to GitHub Pages).
-
-  Customize as you see fit!
-
--->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
-
-  <title>Health Plans: Providers and Formularies</title>
-
-  <!-- Flatdoc -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js'></script>
-  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
-
-  <!-- Flatdoc theme -->
-  <link  href='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/style.css' rel='stylesheet'>
-  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js'></script>
-
-  <!-- Meta -->
-  <meta content="Health Plans: Provider Networks and Formularies" property="og:title">
-  <meta content="Learn how to structure and describe what providers and drugs are covered by a particular health plan." name="description">
-
-  <!-- Initializer -->
-  <script>
-    Flatdoc.run({
-      fetcher: Flatdoc.github('CMSgov/QHP-provider-formulary-APIs')
-    });
-  </script>
-</head>
-<body class='no-literate large-brief' role='flatdoc'>
-
-  <div class='header'>
-    <div class='left'>
-      <h1>Health Plans: Provider Networks and Formularies</h1>
-      <ul>
-        <li><a href='https://github.com/CMSgov/QHP-provider-formulary-APIs'>View on GitHub</a></li>
-        <li><a href='https://github.com/CMSgov/QHP-provider-formulary-APIs/issues'>Issues</a></li>
-      </ul>
-    </div>
-    <div class='right'>
-      <!-- GitHub buttons: see http://ghbtns.com -->
-      <iframe src="http://ghbtns.com/github-btn.html?user=USER&amp;repo=REPO&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-    </div>
-  </div>
-
-  <div class='content-root'>
-    <div class='menubar'>
-      <div class='menu section' role='flatdoc-menu'></div>
-    </div>
-    <div role='flatdoc-content' class='content'></div>
-  </div>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      QHP Provider/Formulary APIs: Sample Issuer Site
+    </title>
+  </head>
+  <body>
+    <h1 id="sample-issuer-site">
+      QHP Provider/Formulary APIs: Sample Issuer Site
+    </h1>
+    <p>
+      This site is a sample of how issuers could organize and make available their CMS-mandated data files. Please note that other than the format of the files, everything here is simply an example.
+    </p>
+    <p>
+      The <a href="cms-data-index.json">cms-data-index.json file</a> is the index data file. It lists the locations where other files can be found.
+    </p>
+    <p>
+      <a href="data/plans.json">plans.json</a> lists the plans for this issuer.
+    </p>
+    <p>
+      <a href="data/providers.json">providers.json</a> lists the providers for all the plans for this issuer. Each provider is listed once and only once in the providers.json file; there is a mapping that allows the issuer to associate the provider with one or more plans in their network.
+    </p>
+    <p>
+      The drugs.json files list the drugs covered by the issuer plans, and provides a mapping between each drug and the plans that cover that drug. In this example, there are two drugs.json files, <a href="data/drugs-1.json">drugs-1.json</a> and <a href="data/drugs-2.json">drugs-2.json</a>. They are both listed in the <a href="cms-data-index.json">cms-data-index.json file</a> so they can be discovered.
+    </p>
+    <p>
+      In this example, the cms-data-index.json file is hosted in the root directory of the site. The various data files (plans.json, providers.json, drugs.json) are hosted in the data/ subdirectory.
+    </p>
+    <p>
+      While it is acceptable to serve the json files as text/plain, it is preferrable to set your web server to associate the application/json MIME type with the .json file extension, if it is not already set to that by default.
+    </p>
+    <p>
+      For more information on the format of the various files, see the <a href="developer/index.html">developer documentation</a>.
+    </p>
+  </body>
 </html>

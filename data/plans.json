@@ -1,0 +1,179 @@
+[
+    {
+        "plan_id_type": "HIOS-PLAN-ID",
+        "plan_id": "12345XX9876543",
+        "marketing_name": "Vandelay Insurance Gold Health Plan",
+        "summary_url": "https://www.vandelay.co/plans/gold/summary",
+        "marketing_url": "https://www.vandelay.co/plans/gold",
+        "plan_contact": "art@vandelay.co",
+        "network": [
+            {
+                "network_tier": "PREFERRED"
+            },
+            {
+                "network_tier": "NON-PREFERRED"
+            }
+        ],
+        "formulary": [
+            {
+                "drug_tier": "GENERIC",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 0.0,
+                        "copay_opt": "NO-CHARGE",
+                        "coinsurance_rate": 0.20,
+                        "coinsurance_opt": null
+                    }
+                ]
+            },
+            {
+                "drug_tier": "BRAND",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 15.0,
+                        "copay_opt": null,
+                        "coinsurance_rate": 0.0,
+                        "coinsurance_opt": null
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    }
+                ]
+            }
+        ],
+        "last_updated_on": "2015-06-12"
+    },
+    {
+        "plan_id_type": "HIOS-PLAN-ID",
+        "plan_id": "12345XX9876542",
+        "marketing_name": "Vandelay Insurance Silver Health Plan",
+        "summary_url": "https://www.vandelay.co/plans/silver/summary",
+        "marketing_url": "https://www.vandelay.co/plans/silver",
+        "plan_contact": "art@vandelay.co",
+        "network": [
+            {
+                "network_tier": "PREFERRED"
+            },
+            {
+                "network_tier": "NON-PREFERRED"
+            }
+        ],
+        "formulary": [
+            {
+                "drug_tier": "GENERIC",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 0.0,
+                        "copay_opt": "NO-CHARGE",
+                        "coinsurance_rate": 0.20,
+                        "coinsurance_opt": null
+                    }
+                ]
+            },
+            {
+                "drug_tier": "BRAND",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 15.0,
+                        "copay_opt": null,
+                        "coinsurance_rate": 0.0,
+                        "coinsurance_opt": null
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    }
+                ]
+            }
+        ],
+        "last_updated_on": "2015-06-12"
+    },
+    {
+        "plan_id_type": "HIOS-PLAN-ID",
+        "plan_id": "12345XX9876541",
+        "marketing_name": "Vandelay Insurance Bronze Health Plan",
+        "summary_url": "https://www.vandelay.co/plans/bronze/summary",
+        "marketing_url": "https://www.vandelay.co/plans/bronze",
+        "plan_contact": "art@vandelay.co",
+        "network": [
+            {
+                "network_tier": "PREFERRED"
+            },
+            {
+                "network_tier": "NON-PREFERRED"
+            }
+        ],
+        "formulary": [
+            {
+                "drug_tier": "GENERIC",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 0.0,
+                        "copay_opt": "NO-CHARGE",
+                        "coinsurance_rate": 0.20,
+                        "coinsurance_opt": null
+                    }
+                ]
+            },
+            {
+                "drug_tier": "BRAND",
+                "mail_order": true,
+                "cost_sharing": [
+                    {
+                        "pharmacy_type": "1-MONTH-IN-RETAIL",
+                        "copay_amount": 15.0,
+                        "copay_opt": null,
+                        "coinsurance_rate": 0.0,
+                        "coinsurance_opt": null
+                    },
+                    {
+                        "pharmacy_type": "1-MONTH-IN-MAIL",
+                        "copay_amount": 20.0,
+                        "copay_opt": "AFTER-DEDUCTIBLE",
+                        "coinsurance_rate": 0.10,
+                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                    }
+                ]
+            }
+        ],
+        "last_updated_on": "2015-06-12"
+    }
+]

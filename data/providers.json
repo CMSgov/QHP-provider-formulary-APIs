@@ -1,0 +1,107 @@
+[
+    {
+        "npi": "1234567893",
+        "type": "INDIVIDUAL",
+        "name": {
+            "first": "Martin",
+            "middle": "Van",
+            "last": "Nostrand"
+        },
+        "address": {
+            "address": "123 Park Ave",
+            "address_2": "Suite 120",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10003"
+        },
+        "phone": "2125551212",
+        "specialty": "Dermatology",
+        "accepting": true,
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "NON-PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "network_tier": "NON-PREFERRED"
+            }
+        ]
+    },
+    {
+        "npi": "1234567892",
+        "type": "INDIVIDUAL",
+        "name": {
+            "first": "Kel",
+            "last": "Varnsen"
+        },
+        "address": {
+            "address": "123 Lexington Ave",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10003"
+        },
+        "phone": "2125552323",
+        "specialty": "Ophthalmology",
+        "accepting": true,
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "network_tier": "NON-PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876541",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876541",
+                "network_tier": "NON-PREFERRED"
+            }
+        ]
+    },
+    {
+        "npi": "1234567890123949",
+        "type": "FACILITY",
+        "facility_name": "New York City Hospital",
+        "facility_type": "Hospital",
+        "address": {
+            "address": "123 W. 34th St",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10003"
+        },
+        "phone": "2025552424",
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "NON-PREFERRED"
+            }
+        ]
+    }
+]

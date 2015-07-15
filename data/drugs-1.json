@@ -1,0 +1,54 @@
+[
+    {
+        "rxnorm_id": "209459",
+        "drug_name": "Acetaminophen 500 MG Oral Tablet [Tylenol]",
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "drug_tier": "GENERIC",
+                "prior_authorization": false,
+                "step_therapy": false,
+                "quantity_limit": false
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "drug_tier": "GENERIC",
+                "prior_authorization": false,
+                "step_therapy": false,
+                "quantity_limit": false
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876541",
+                "drug_tier": "GENERIC",
+                "prior_authorization": false,
+                "step_therapy": false,
+                "quantity_limit": false
+            }
+        ]
+    },
+    {
+        "rxnorm_id": "248656",
+        "drug_name": "Azithromycin 500 MG Oral Tablet [Zithromax]",
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "drug_tier": "GENERIC",
+                "prior_authorization": false,
+                "step_therapy": false,
+                "quantity_limit": true
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876542",
+                "drug_tier": "GENERIC",
+                "prior_authorization": false,
+                "step_therapy": false,
+                "quantity_limit": false
+            }
+        ]
+    }
+]

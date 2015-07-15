@@ -1,0 +1,12 @@
+{
+    "provider_urls": [
+      "https://cmsgov.github.io/QHP-provider-formulary-APIs/data/providers.json"
+    ],
+    "formulary_urls": [
+      "https://cmsgov.github.io/QHP-provider-formulary-APIs/data/drugs-1.json",
+      "https://cmsgov.github.io/QHP-provider-formulary-APIs/data/drugs-2.json"
+    ],
+    "plan_urls": [
+      "https://cmsgov.github.io/QHP-provider-formulary-APIs/data/plans.json"
+    ]
+}
