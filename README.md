@@ -6,24 +6,24 @@ Learn how to describe what providers and drugs are covered by a particular healt
 JSON
 ----
 
-All information must be described in the JSON file format. JSON is a lightweight
-and simple way to represent machine-readable data. It is quickly becoming the de
-facto standard for shuttling data across the internet, fueled primarily by the
-rise of mobile and APIs. Modern programming languages can interpret and produce
-JSON out of the box.
+All information must be described in the JSON file format. JSON is a lightweight and simple way to represent machine-readable data. It is quickly becoming the de facto standard for shuttling data across the internet, fueled primarily by the rise of mobile and APIs. Modern programming languages can interpret and produce JSON out of the box.
 
-[Learn about JSON >](#)
+[Learn about JSON >](http://json.org/)
 
 
 Public Discoverability
 ----------------------
 
-Organizations must post their `plans.json`, `providers.json`, and `drugs.json` files on their websites, accessible to the public. 
-
-The path to the URLs will be submitted via HIOS to CMS. 
+Organizations must post their `index.json`, `plans.json`, `providers.json`, and `drugs.json` files on a website, accessible to the public. 
 
 The JSON URLs listed above *must* be provided over HTTPS to ensure the integrity of the data.
 
+Data types
+----------
+
+All values in the JSON are strings, unless otherwise noted in the `Definition` field. 
+
+Dates should be strings, in ISO 8601 format (e.g. YYYY-MM-DD).
 
 Health Plans - plans.json
 -------------------------
@@ -37,55 +37,56 @@ Health Plans - plans.json
 
 | Field               | Label                          | Definition                                                                                                           | Required |
 | -----               | -----                          | ----------                                                                                                           | -------- |
-| **plan_id_type**    | ID Type                        | Type of Plan ID. The preferred is the HIOS Plan ID - `HIOS-PLAN-ID`                                                  | Always   |
-| **plan_id**         | Unique Identifier              | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)           | Always   |
-| **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | Always   |
-| **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | Always   |
+| **plan_id**         | Unique Identifier              | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)           | Yes   |
+| **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | No   |
+| **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | No   |
 | **marketing_url**   | URL for Plan Information       | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.                    | No       |
 | **formulary_url**  | URL for Formulary              | The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.                    | No       |
-| **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | Always   |
-| **network**         | Network                        | Array of networks                                                                                                    | Always   |
-| **formulary**       | Formularies                    | Array of drug lists                                                                                                  | Always   |
+| **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | No   |
+| **network**         | Network                        | Array of networks                                                                                                    | Yes   |
+| **formulary**       | Formularies                    | Array of drug lists                                                                                                  | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
-| **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Always   |
+| **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
 
 #### Network sub-type
 
+This type defines a network within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of network tier names. This value will be used later in the `providers.json` file to connect a provider to a specific plan and network tier within that plan.
+
 | Field              | Label        | Definition                                                                                             | Required |
 | -----              | -----        | ----------                                                                                             | -------- |
-| ***network_tier*** | Network Tier | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase. ) | Always   |
-
+| ***network_tier*** | Network Tier | Tier name for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase. ) | Yes   |
 
 #### Formulary sub-type
 
+This type defines a formulary within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of formulary tier names. This value will be used later in the `drugs.json` file to connect a provider to a specific plan and network tier within that plan.
+
 | Field              | Label        | Definition                                                                                                                                                                                                                                            | Required |
 | -----              | -----        | ----------                                                                                                                                                                                                                                            | -------- |
-| ***drug_tier***    | Drug Tier    | Tier for formulary - (Example Values: `GENERIC`, `PREFERRED-GENERIC`, `NON-PREFERRED-GENERIC`, `SPECIALTY`, `BRAND`, `PREFERRED-BRAND`, `NON-PREFERRED-BRAND`, `ZERO-COST-SHARE-PREVENTIVE`, `MEDICAL-SERVICE`, etc. Values should be all uppercase.) | Always   |
-| ***mail_order***   | Mail Order   | Does the formulary cover mail order? - (Values: `true` or `false`)                                                                                                                                                                                    | Always   |
-| ***cost_sharing*** | Cost Sharing | Array of cost sharing values (see "Cost sharing sub-type" below)                                                                                                                                                                                      | Always   |
-
+| ***drug_tier***    | Drug Tier    | Tier for formulary - (Example Values: `GENERIC`, `PREFERRED-GENERIC`, `NON-PREFERRED-GENERIC`, `SPECIALTY`, `BRAND`, `PREFERRED-BRAND`, `NON-PREFERRED-BRAND`, `ZERO-COST-SHARE-PREVENTIVE`, `MEDICAL-SERVICE`, etc. Values should be all uppercase.) | Yes   |
+| ***mail_order***   | Mail Order   | Does the formulary cover mail order? - (Values: `true` or `false`)                                                                                                                                                                                    | Yes   |
+| ***cost_sharing*** | Cost Sharing | Array of cost sharing values (see "Cost sharing sub-type" below)                                                                                                                                                                                      | Yes   |
 
 #### Cost sharing sub-type
 
 | Field                | Label              | Definition                                                                                                                                                                                         | Required |
 | -----                | -----              | ----------                                                                                                                                                                                         | -------- |
-| **pharmacy_type**    | Pharmacy Type      | Pharmacy type (Example Values: `1-MONTH-IN-RETAIL`, `1-MONTH-OUT-RETAIL`, `1-MONTH-IN-MAIL`, `1-MONTH-OUT-MAIL`, `3-MONTH-IN-RETAIL`, `3-MONTH-OUT-RETAIL`, `3-MONTH-IN-MAIL`, `3-MONTH-OUT-MAIL`) | Always   |
-| **copay_amount**     | Copay amount       | Amount of copay, in $ (number)                                                                                                                                                                     | Always   |
-| **copay_opt**        | Copay option       | Qualifier of copay amount (Values: `AFTER-DEDUCTIBLE`, `BEFORE-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`                                                                              | Always   |
-| **coinsurance_rate** | Coinsurance rate   | Rate of coinsurance (float, 0.0 to 1.0)                                                                                                                                                            | Always   |
-| **coinsurance_opt**  | Coinsurance option | Qualifier for coinsurance rate (Values: `AFTER-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`)                                                                                             | Always   |
+| **pharmacy_type**    | Pharmacy Type      | Pharmacy type (Example Values: `1-MONTH-IN-RETAIL`, `1-MONTH-OUT-RETAIL`, `1-MONTH-IN-MAIL`, `1-MONTH-OUT-MAIL`, `3-MONTH-IN-RETAIL`, `3-MONTH-OUT-RETAIL`, `3-MONTH-IN-MAIL`, `3-MONTH-OUT-MAIL`) | Yes   |
+| **copay_amount**     | Copay amount       | Amount of copay, in $ (number)                                                                                                                                                                     | Yes   |
+| **copay_opt**        | Copay option       | Qualifier of copay amount (Values: `AFTER-DEDUCTIBLE`, `BEFORE-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`                                                                              | Yes   |
+| **coinsurance_rate** | Coinsurance rate   | Rate of coinsurance (float, 0.0 to 1.0)                                                                                                                                                            | Yes   |
+| **coinsurance_opt**  | Coinsurance option | Qualifier for coinsurance rate (Values: `AFTER-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`)                                                                                             | Yes   |
 
 
 #### Benefits sub-type
 
-The **Benefits** sub-type is an optional section and will be shaped depending on what industry and consumers find valuable. 
+The **Benefits** sub-type is an No section and will be shaped depending on what industry and consumers find valuable. 
 
 For example, many health plans are offering telemedicine as an additional health benefit and that can be highlighted by adding a `telemedicine` entry.
 
-| Field                | Label              | Definition                                                                                                                                                                                         | Required |
-| -----                | -----              | ----------                                                                                                                                                                                         | -------- |
-| **telemedicine**    | Offers Telemedicine     | Does the plan cover telemedicine? - (Values: `true` or `false`)    | No   |
+| Field            | Label               | Definition                                                                            | Required |
+| -----            | -----               | ----------                                                                            | -------- |
+| **telemedicine** | Offers Telemedicine | Does the plan cover telemedicine? Boolean (values should be either `true` or `false`) | No   |
 
 
 ### Example 
@@ -162,59 +163,61 @@ Providers - providers.json
 
 `providers.json` contains a list of providers and the plans that cover their services.
 
+If a provider has more than one NPI number, please create seperate entries for each NPI number.
+
 ### Schema
 
-| Field     | Label                | Definition                                                                                                 | Required |
-| -----     | -----                | ----------                                                                                                 | -------- |
-| **npi**   | National Provider ID | The National Provider Identifier (NPI) is a unique identification number for covered health care providers | Always   |
-| **type**  | Type                 | Specify if `INDIVIDUAL` or `FACILITY`                                                                      | Always   |
-| **plans** | Plans                | Array of plans that cover this provider (see "Plans sub-type" below)                                       | Always   |
-| **last_updated_on** | Last Updated On                | Date of when the record for this provider has been last updated or refreshed - ISO 8601 format (e.g. YYYY-MM-DD)                | Always   |
+| Field               | Label                | Definition                                                                                                              | Required |
+| -----               | -----                | ----------                                                                                                              | -------- |
+| **npi**             | National Provider ID | The National Provider Identifier (NPI) is a unique identification number for covered health care providers              | Yes   |
+| **type**            | Type                 | Specify if `INDIVIDUAL` or `FACILITY`                                                                                   | Yes   |
+| **plans**           | Plans                | Array of plans that cover this provider (see "Plans sub-type" below)                                                    | Yes   |
+| **last_updated_on** | Last Updated On      | Date of when the record for this provider has been last updated or refreshed - ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
 If the entry is for an `INDIVIDUAL` then the following fields should be present:
 
 | Field           | Label              | Definition                                                        | Required |
 | -----           | -----              | ----------                                                        | -------- |
-| **name**        | Name               | -                                                                 | Always   |
-| ***prefix***    | Prefix             | -                                                                 | No       |
-| ***first***     | First Name         | -                                                                 | Always   |
-| ***middle***    | Middle Name        | -                                                                 | No       |
-| ***last***      | Last Name          | -                                                                 | Always   |
-| ***suffix***    | Suffix             | -                                                                 | No       |
-| **address**     | Address            | -                                                                 | Always   |
-| ***address***   | Street Address     | -                                                                 | Always   |
-| ***address_2*** | Street Address 2   | -                                                                 | No       |
-| ***city***      | City               | -                                                                 | Always   |
-| ***state***     | State Abbreviation | -                                                                 | Always   |
-| ***zip***       | Zip Code           | -                                                                 | Always   |
-| **phone**       | Phone Number       | -                                                                 | Always   |
-| **specialty**   | Specialty Type     | An array of speciality types.                                     | Always   |
-| **accepting**   | Accepting Patients | Is the provider accepting patients? - (Values: `true` or `false`) | Always   |
-| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | Optional   |
-| **languages**   | Languages Spoken   | An array of the languages spoken                                  | Optional   |
+| **name**        | Name               | -                                                                 | Yes   |
+| ***prefix***    | Prefix             | -                                                                 | No |
+| ***first***     | First Name         | -                                                                 | Yes   |
+| ***middle***    | Middle Name        | -                                                                 | No |
+| ***last***      | Last Name          | -                                                                 | Yes   |
+| ***suffix***    | Suffix             | -                                                                 | No |
+| **addresses**   | Address            | List of addresses for this provider                               | Yes   |
+| ***address***   | Street Address     | -                                                                 | Yes   |
+| ***address_2*** | Street Address 2   | -                                                                 | No |
+| ***city***      | City               | -                                                                 | Yes   |
+| ***state***     | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)                      | Yes   |
+| ***zip***       | Zip Code           | Five digit zip code, represented as a string                      | Yes   |
+| ***phone***     | Phone Number       | Phone number for this address, string                                    | No |
+| **specialty**   | Specialty Type     | An array of speciality types. Free form text field.               | No |
+| **accepting**   | Accepting Patients | Is the provider accepting patients? - (Values: `true` or `false`) | No |
+| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
+| **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
 
 If the entry is for a `FACILITY` then the following fields should be present:
 
-| Field             | Label              | Definition | Required |
-| -----             | -----              | ---------- | -------- |
-| **facility_name** | Facility Name      | -          | Always   |
-| **facility_type** | Facility Type      | An array of facility types. | Always   |
-| **address**       | Address            | -          | Always   |
-| ***address***     | Street Address     | -          | Always   |
-| ***address_2***   | Street Address 2   | -          | No       |
-| ***city***        | City               | -          | Always   |
-| ***state***       | State Abbreviation | -          | Always   |
-| ***zip***         | Zip Code           | -          | Always   |
-| **phone**         | Phone Number       | -          | Always   |
+| Field             | Label              | Definition                                        | Required |
+| -----             | -----              | ----------                                        | -------- |
+| **facility_name** | Facility Name      | -                                                 | Yes |
+| **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
+| **addresses**     | Address            | List of addresses for this facility               | Yes |
+| ***address***     | Street Address     | -                                                 | Yes |
+| ***address_2***   | Street Address 2   | -                                                 | No  |
+| ***city***        | City               | -                                                 | Yes |
+| ***state***       | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)      | Yes |
+| ***zip***         | Zip Code           | Five digit zip code, represented as a string      | Yes |
+| ***phone***       | Phone Number       | Phone number for this address, string             | No  |
 
 
 #### Plans sub-type
 
 | Field              | Label             | Definition                                                                                                 | Required |
 | -----              | -----             | ----------                                                                                                 | -------- |
-| ***plan_id_type*** | ID Type           | Type of Plan ID. The preferred is the HIOS Plan ID - `HIOS-PLAN-ID`                                        | Always   |
-| ***plan_id***      | Unique Identifier | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.) | Always   |
-| ***network_tier*** | Network Tier      | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase. )     | Always   |
+| ***plan_id_type*** | ID Type           | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                  | Yes   |
+| ***plan_id***      | Unique Identifier | The plan ID that was used in the plans.json as the `plan_id` value. For a Marketplace plan, this must be the 14-digit HIOS plan id. | Yes   |
+| ***network_tier*** | Network Tier      | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase.) Must match a network tier defined in the corresponding plan record in a `plans.json` file. | Yes   |
 
 
 ### Example
@@ -230,15 +233,24 @@ If the entry is for a `FACILITY` then the following fields should be present:
             "last": "Ngyuen",
             "suffix": "Jr."
         },
-        "address": {
-            "address": "123 Main Street",
+        "addresses": [
+          {
+            "address": "123 Main St",
             "address_2": "Suite 120",
             "city": "Little Rock",
             "state": "AR",
-            "zip": "72201"
-        },
-        "phone": "2025551212",
-        "specialty": ["Ophthalmology"],
+            "zip": "72201",
+            "phone": "2025551212"
+          },
+          {
+            "address": "675 South St",
+            "city": "Little Rock",
+            "state": "AR",
+            "zip": "72201",
+            "phone": "2025551212"
+          },
+        ],
+        "specialty": ["Ophthalmology", "Endocrinology"],
         "accepting": true,
         "plans": [
             {
@@ -253,21 +265,22 @@ If the entry is for a `FACILITY` then the following fields should be present:
             }
         ],
         "languages": ["English", "Spanish", "Mandarin"],
+        "gender": "Female",
         "last_updated_on": "2015-03-17"
     },
     {
         "npi": "1234567890123949",
         "type": "FACILITY",
         "facility_name": "Main Street Hospital",
-        "facility_type": ["Hospital"],
-        "address": {
-            "address": "123 Main Street",
+        "facility_type": ["Hospital", "Dialysis"],
+        "addresses": {
+            "address": "123 Main St",
             "address_2": "Suite 120",
             "city": "Little Rock",
             "state": "AR",
-            "zip": "72201"
+            "zip": "72201",
+            "phone": "2025551212"
         },
-        "phone": "2025551212",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -296,21 +309,21 @@ Drugs - drugs.json
 
 | Field         | Label           | Definition                                                       | Required |
 | -----         | -----           | ----------                                                       | -------- |
-| **rxnorm_id** | Drug Identifier | RxCUI (Specific drug identifier from RXNORM)                     | Always   |
-| **drug_name** | Drug Name       | Name of Drug                                                     | Always   |
-| **plans**     | Plans           | Array of plans that cover this drug (see "Plans sub-type" below) | Always   |
+| **rxnorm_id** | Drug Identifier | RxCUI (Specific drug identifier from RXNORM)                     | Yes   |
+| **drug_name** | Drug Name       | Name of Drug                                                     | Yes   |
+| **plans**     | Plans           | Array of plans that cover this drug (see "Plans sub-type" below) | Yes   |
 
 
 #### Plans sub-type
 
 | Field                     | Label                        | Definition                                                                                                                                                                                                                                           | Required |
 | -----                     | -----                        | ----------                                                                                                                                                                                                                                           | -------- |
-| ***plan_id_type***        | ID Type                      | Type of Plan ID. The preferred is the HIOS Plan ID - `HIOS-PLAN-ID`                                                                                                                                                                                  | Always   |
-| ***plan_id***             | Unique Identifier            | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)                                                                                                                                           | Always   |
-| ***drug_tier***           | Drug Tier                    | Tier for formulary (Example Values: `GENERIC`, `PREFERRED-GENERIC`, `NON-PREFERRED-GENERIC`, `SPECIALTY`, `BRAND`, `PREFERRED-BRAND`, `NON-PREFERRED-BRAND`, `ZERO-COST-SHARE-PREVENTIVE`, `MEDICAL-SERVICE`, etc. Values should be all uppercase. ) | Always   |
-| ***prior_authorization*** | Prior Authorization Required | Is prior authorization required? - (Values: `true` or `false`)                                                                                                                                                                                       | Always   |
-| ***step_therapy***        | Step Therapy Required        | Is step therapy required? - (Values: `true` or `false`)                                                                                                                                                                                              | Always   |
-| ***quantity_limit***      | Quantity Limit               | Is there a quantity limit for this drug? - (Values: `true` or `false`)                                                                                                                                                                               | Always   |
+| ***plan_id_type*** | ID Type           | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                  | Yes   |
+| ***plan_id***      | Unique Identifier | The plan ID that was used in the plans.json as the `plan_id` value. For a Marketplace plan, this must be the 14-digit HIOS plan id. | Yes   |
+| ***drug_tier***           | Drug Tier                    | Tier for formulary (Example Values: `GENERIC`, `PREFERRED-GENERIC`, `NON-PREFERRED-GENERIC`, `SPECIALTY`, `BRAND`, `PREFERRED-BRAND`, `NON-PREFERRED-BRAND`, `ZERO-COST-SHARE-PREVENTIVE`, `MEDICAL-SERVICE`, etc. Values should be all uppercase. ) | Yes   |
+| ***prior_authorization*** | Prior Authorization Required | Is prior authorization required? - (boolean value: `true` or `false`)                                                                                                                                                                                       | No   |
+| ***step_therapy***        | Step Therapy Required        | Is step therapy required? - (boolean value: `true` or `false`)                                                                                                                                                                                              | No   |
+| ***quantity_limit***      | Quantity Limit               | Is there a quantity limit for this drug? - (boolean value: `true` or `false`)                                                                                                                                                                               | No   |
 
 
 
