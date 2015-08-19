@@ -179,11 +179,11 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | Field           | Label              | Definition                                                        | Required |
 | -----           | -----              | ----------                                                        | -------- |
 | **name**        | Name               | -                                                                 | Yes   |
-| ***prefix***    | Prefix             | -                                                                 | No |
-| ***first***     | First Name         | -                                                                 | Yes   |
-| ***middle***    | Middle Name        | -                                                                 | No |
-| ***last***      | Last Name          | -                                                                 | Yes   |
-| ***suffix***    | Suffix             | -                                                                 | No |
+| ***prefix***    | Prefix             | One of `Mr.`, `Mrs.`, `Miss`, `Ms.`, `Dr.`                        | No |
+| ***first***     | First Name         | Full first name                                                   | Yes   |
+| ***middle***    | Middle Name        | Full middle name                                                  | No |
+| ***last***      | Last Name          | Full last name                                                    | Yes   |
+| ***suffix***    | Suffix             | One of `Jr.`, `Sr.`, `II`, `III`, `III`, `IV`                     | No |
 | **addresses**   | Address            | List of addresses for this provider                               | Yes   |
 | ***address***   | Street Address     | -                                                                 | Yes   |
 | ***address_2*** | Street Address 2   | -                                                                 | No |
