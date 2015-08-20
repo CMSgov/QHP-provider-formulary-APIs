@@ -44,7 +44,7 @@ Health Plans - plans.json
 | **formulary_url**  | URL for Formulary              | The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.                    | No       |
 | **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | No   |
 | **network**         | Network                        | Array of networks                                                                                                    | Yes   |
-| **formulary**       | Formularies                    | Array of drug lists                                                                                                  | Yes   |
+| **formulary**       | Formulary                    | The formulary associated with this plan.                                         | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
 | **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
@@ -109,48 +109,26 @@ For example, many health plans are offering telemedicine as an additional health
                 "network_tier": "NON-PREFERRED"
             }
         ],
-        "formulary": [
+        "formulary": {
+          "drug_tier": "BASIC",
+          "mail_order": true,
+          "cost_sharing": [
             {
-                "drug_tier": "GENERIC",
-                "mail_order": true,
-                "cost_sharing": [
-                    {
-                        "pharmacy_type": "1-MONTH-IN-RETAIL",
-                        "copay_amount": 20.0,
-                        "copay_opt": "AFTER-DEDUCTIBLE",
-                        "coinsurance_rate": 0.10,
-                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
-                    },
-                    {
-                        "pharmacy_type": "1-MONTH-IN-MAIL",
-                        "copay_amount": 0.0,
-                        "copay_opt": "NO-CHARGE",
-                        "coinsurance_rate": 0.20,
-                        "coinsurance_opt": null
-                    }
-                ]
+              "pharmacy_type": "1-MONTH-IN-RETAIL",
+              "copay_amount": 20.0,
+              "copay_opt": "AFTER-DEDUCTIBLE",
+              "coinsurance_rate": 0.10,
+              "coinsurance_opt": "BEFORE-DEDUCTIBLE"
             },
             {
-                "drug_tier": "BRAND",
-                "mail_order": true,
-                "cost_sharing": [
-                    {
-                        "pharmacy_type": "1-MONTH-IN-RETAIL",
-                        "copay_amount": 15.0,
-                        "copay_opt": null,
-                        "coinsurance_rate": 0.0,
-                        "coinsurance_opt": null
-                    },
-                    {
-                        "pharmacy_type": "1-MONTH-IN-MAIL",
-                        "copay_amount": 20.0,
-                        "copay_opt": "AFTER-DEDUCTIBLE",
-                        "coinsurance_rate": 0.10,
-                        "coinsurance_opt": "BEFORE-DEDUCTIBLE"
-                    }
-                ]
+              "pharmacy_type": "1-MONTH-IN-MAIL",
+              "copay_amount": 0.0,
+              "copay_opt": "NO-CHARGE",
+              "coinsurance_rate": 0.20,
+              "coinsurance_opt": null
             }
-        ],
+          ]
+        },
         "last_updated_on": "2015-03-17"
     }
 ]
