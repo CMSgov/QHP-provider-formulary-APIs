@@ -37,6 +37,7 @@ Health Plans - plans.json
 
 | Field               | Label                          | Definition                                                                                                           | Required |
 | -----               | -----                          | ----------                                                                                                           | -------- |
+| **plan_id_type**    | ID Type                        | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                                  | Yes   |
 | **plan_id**         | Unique Identifier              | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)           | Yes   |
 | **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | No   |
 | **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | No   |
