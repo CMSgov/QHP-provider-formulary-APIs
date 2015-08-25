@@ -66,7 +66,7 @@ This type defines a formulary within a plan. The values should be something that
 | -----              | -----        | ----------                                                                                                                                                                                                                                            | -------- |
 | ***drug_tier***    | Drug Tier    | Tier for formulary - (Example Values: `GENERIC`, `PREFERRED-GENERIC`, `NON-PREFERRED-GENERIC`, `SPECIALTY`, `BRAND`, `PREFERRED-BRAND`, `NON-PREFERRED-BRAND`, `ZERO-COST-SHARE-PREVENTIVE`, `MEDICAL-SERVICE`, etc. Values should be all uppercase.) | Yes   |
 | ***mail_order***   | Mail Order   | Does the formulary cover mail order? - (Values: `true` or `false`)                                                                                                                                                                                    | Yes   |
-| ***cost_sharing*** | Cost Sharing | Array of cost sharing values (see "Cost sharing sub-type" below)                                                                                                                                                                                      | Yes   |
+| ***cost_sharing*** | Cost Sharing | Array of cost sharing values (see "Cost sharing sub-type" below)                                                                                                                                                                                      | No   |
 
 #### Cost sharing sub-type
 
