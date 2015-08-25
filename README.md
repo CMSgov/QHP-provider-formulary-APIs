@@ -180,7 +180,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
 | -----             | -----              | ----------                                        | -------- |
 | **facility_name** | Facility Name      | -                                                 | Yes |
 | **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
-| **addresses**     | Address            | List of addresses for this facility               | Yes |
+| **addresses**     | Address            | List of addresses for this facility (Limit 1)     | Yes |
 | ***address***     | Street Address     | -                                                 | Yes |
 | ***address_2***   | Street Address 2   | -                                                 | No  |
 | ***city***        | City               | -                                                 | Yes |
@@ -251,14 +251,16 @@ If the entry is for a `FACILITY` then the following fields should be present:
         "type": "FACILITY",
         "facility_name": "Main Street Hospital",
         "facility_type": ["Hospital", "Dialysis"],
-        "addresses": {
+        "addresses": [
+          {
             "address": "123 Main St",
             "address_2": "Suite 120",
             "city": "Little Rock",
             "state": "AR",
             "zip": "72201",
             "phone": "2025551212"
-        },
+          }
+        ],
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
