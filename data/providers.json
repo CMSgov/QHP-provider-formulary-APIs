@@ -16,7 +16,7 @@
         },
         "phone": "2125551212",
         "specialty": "Dermatology",
-        "accepting": true,
+        "accepting": "not accepting",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -55,7 +55,7 @@
         },
         "phone": "2125552323",
         "specialty": "Ophthalmology",
-        "accepting": true,
+        "accepting": "accepting",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",

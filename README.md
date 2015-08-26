@@ -171,7 +171,7 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | ***zip***       | Zip Code           | Five digit zip code, represented as a string                      | Yes   |
 | ***phone***     | Phone Number       | Phone number for this address, string                                    | No |
 | **specialty**   | Specialty Type     | An array of speciality types. Free form text field.               | No |
-| **accepting**   | Accepting Patients | Is the provider accepting patients? - (Values: `true` or `false`) | No |
+| **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | No |
 | **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
 | **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
 
@@ -230,7 +230,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
           },
         ],
         "specialty": ["Ophthalmology", "Endocrinology"],
-        "accepting": true,
+        "accepting": "accepting",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
