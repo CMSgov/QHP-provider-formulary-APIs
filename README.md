@@ -148,7 +148,7 @@ If a provider has more than one NPI number, please create seperate entries for e
 
 | Field               | Label                | Definition                                                                                                              | Required |
 | -----               | -----                | ----------                                                                                                              | -------- |
-| **npi**             | National Provider ID | The National Provider Identifier (NPI) is a unique identification number for covered health care providers              | Yes   |
+| **npi**             | National Provider ID | The 10-digit National Provider Identifier (NPI) is a unique identification number for covered health care providers              | Yes   |
 | **type**            | Type                 | Specify if `INDIVIDUAL` or `FACILITY`                                                                                   | Yes   |
 | **plans**           | Plans                | Array of plans that cover this provider (see "Plans sub-type" below)                                                    | Yes   |
 | **last_updated_on** | Last Updated On      | Date of when the record for this provider has been last updated or refreshed - ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
@@ -204,7 +204,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
 ```
 [
     {
-        "npi": "1234567890123456",
+        "npi": "1234567893",
         "type": "INDIVIDUAL",
         "name": {
             "first": "Sarah",
@@ -248,7 +248,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
         "last_updated_on": "2015-03-17"
     },
     {
-        "npi": "1234567890123949",
+        "npi": "1234567893",
         "type": "FACILITY",
         "facility_name": "Main Street Hospital",
         "facility_type": ["Hospital", "Dialysis"],
