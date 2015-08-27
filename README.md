@@ -39,11 +39,11 @@ Health Plans - plans.json
 | -----               | -----                          | ----------                                                                                                           | -------- |
 | **plan_id_type**    | ID Type                        | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                                  | Yes   |
 | **plan_id**         | Unique Identifier              | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)           | Yes   |
-| **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | No   |
-| **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | No   |
-| **marketing_url**   | URL for Plan Information       | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.                    | No       |
+| **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | Yes   |
+| **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | Yes   |
+| **marketing_url**   | URL for Plan Information       | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.                    | Yes       |
 | **formulary_url**  | URL for Formulary              | The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.                    | No       |
-| **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | No   |
+| **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | Yes   |
 | **network**         | Network                        | Array of networks                                                                                                    | Yes   |
 | **formulary**       | Formulary                    | The formulary associated with this plan.                                         | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
@@ -142,7 +142,7 @@ Providers - providers.json
 
 `providers.json` contains a list of providers and the plans that cover their services.
 
-If a provider has more than one NPI number, please create seperate entries for each NPI number.
+If a provider has more than one NPI number, please create seperate entries for each NPI number. If there is no NPI number, set the value to null (`{"npi": null}`)
 
 ### Schema
 
@@ -169,11 +169,11 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | ***city***      | City               | -                                                                 | Yes   |
 | ***state***     | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)                      | Yes   |
 | ***zip***       | Zip Code           | Five digit zip code, represented as a string                      | Yes   |
-| ***phone***     | Phone Number       | Phone number for this address, string                                    | No |
-| **specialty**   | Specialty Type     | An array of speciality types. Free form text field.               | No |
+| ***phone***     | Phone Number       | Phone number for this address, represented as a string of numbers | Yes |
+| **speciality**  | Specialty Type     | An array of speciality types. Free form text field.               | Yes |
 | **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | No |
-| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
-| **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
+| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | Yes |
+| **languages**   | Languages Spoken   | An array of the languages spoken                                  | Yes |
 
 If the entry is for a `FACILITY` then the following fields should be present:
 
@@ -187,7 +187,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
 | ***city***        | City               | -                                                 | Yes |
 | ***state***       | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)      | Yes |
 | ***zip***         | Zip Code           | Five digit zip code, represented as a string      | Yes |
-| ***phone***       | Phone Number       | Phone number for this address, string             | No  |
+| ***phone***       | Phone Number       | Phone number for this address, string             | Yes  |
 
 
 #### Plans sub-type
