@@ -172,7 +172,7 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | ***phone***     | Phone Number       | Phone number for this address, represented as a string of numbers | Yes |
 | **speciality**  | Specialty Type     | An array of speciality types. Free form text field.               | Yes |
 | **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | Yes |
-| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | Yes |
+| **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
 | **languages**   | Languages Spoken   | An array of the languages spoken                                  | Yes |
 
 If the entry is for a `FACILITY` then the following fields should be present:
