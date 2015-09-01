@@ -142,7 +142,7 @@ Providers - providers.json
 
 `providers.json` contains a list of providers and the plans that cover their services.
 
-If a provider has more than one NPI number, please create seperate entries for each NPI number. If there is no NPI number, set the value to null (`{"npi": null}`)
+If a provider has more than one NPI number, please create separate entries for each NPI number. If there is no NPI number, set the value to null (`{"npi": null}`)
 
 ### Schema
 
