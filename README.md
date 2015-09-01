@@ -60,7 +60,7 @@ This type defines a network within a plan. The values should be something that i
 
 #### Formulary sub-type
 
-This type defines a formulary within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of formulary tier names. This value will be used later in the `drugs.json` file to connect a provider to a specific plan and network tier within that plan.
+This type defines a formulary within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of formulary tier names. This value will be used later in the `drugs.json` file to connect a drug to a specific plan and formulary tier within that plan.
 
 | Field              | Label        | Definition                                                                                                                                                                                                                                            | Required |
 | -----              | -----        | ----------                                                                                                                                                                                                                                            | -------- |
@@ -81,7 +81,7 @@ This type defines a formulary within a plan. The values should be something that
 
 #### Benefits sub-type
 
-The **Benefits** sub-type is an No section and will be shaped depending on what industry and consumers find valuable. 
+The **Benefits** sub-type is an optional section and will be shaped depending on what industry and consumers find valuable.
 
 For example, many health plans are offering telemedicine as an additional health benefit and that can be highlighted by adding a `telemedicine` entry.
 
@@ -142,7 +142,7 @@ Providers - providers.json
 
 `providers.json` contains a list of providers and the plans that cover their services.
 
-If a provider has more than one NPI number, please create seperate entries for each NPI number. If there is no NPI number, set the value to null (`{"npi": null}`)
+If a provider has more than one NPI number, please create separate entries for each NPI number. If there is no NPI number, set the value to null (`{"npi": null}`)
 
 ### Schema
 

@@ -18,7 +18,7 @@ This standard does not provide guidance on the use of `https` vs. `http` for
 a scheme: either or both are valid for the purposes of the index document's URL.
 
 This standard does not provide guidance on the MIME media type the docuemnt
-shall be serve as. According to RFC 4627, the media type for JSON text is
+shall be served as. According to RFC 4627, the media type for JSON text is
 `application/json`.
 
 Schema
@@ -30,7 +30,7 @@ The schema of the index document is as follows:
 | ----- | ----------- | --------- |
 | provider_urls | An array of URLs of JSON files that conform to the provider schema, minimum of 1 required | Required |
 | formulary_urls | An array of URLs of JSON files that conform to the formulary schema, minimum of 1 required | Required |
-| provider_urls | An array of URLs of JSON files that conform to the provider schema, minimum of 1 required | Required |
+| plan_urls | An array of URLs of JSON files that conform to the plans schema, minimum of 1 required | Required |
 
 ### Example
 
