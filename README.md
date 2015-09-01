@@ -60,7 +60,7 @@ This type defines a network within a plan. The values should be something that i
 
 #### Formulary sub-type
 
-This type defines a formulary within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of formulary tier names. This value will be used later in the `drugs.json` file to connect a drug to a specific plan and network tier within that plan.
+This type defines a formulary within a plan. The values should be something that is meaningful to an issuer, there is no taxonomy of formulary tier names. This value will be used later in the `drugs.json` file to connect a drug to a specific plan and formulary tier within that plan.
 
 | Field              | Label        | Definition                                                                                                                                                                                                                                            | Required |
 | -----              | -----        | ----------                                                                                                                                                                                                                                            | -------- |
