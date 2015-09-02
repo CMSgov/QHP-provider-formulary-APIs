@@ -7,15 +7,17 @@
             "middle": "Van",
             "last": "Nostrand"
         },
-        "address": {
+        "addresses": [
+          {
             "address": "123 Park Ave",
             "address_2": "Suite 120",
             "city": "New York",
             "state": "NY",
-            "zip": "10003"
-        },
-        "phone": "2125551212",
-        "specialty": "Dermatology",
+            "zip": "10003",
+            "phone": "2125551212"
+          }
+        ],
+        "speciality": ["Dermatology", "Oncology"],
         "accepting": "not accepting",
         "plans": [
             {
@@ -47,14 +49,23 @@
             "first": "Kel",
             "last": "Varnsen"
         },
-        "address": {
+        "addresses": [
+          {
             "address": "123 Lexington Ave",
             "city": "New York",
             "state": "NY",
-            "zip": "10003"
-        },
-        "phone": "2125552323",
-        "specialty": "Ophthalmology",
+            "zip": "10003",
+            "phone": "2125552324"
+          },
+          {
+            "address": "127 Lexington Ave",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10003",
+            "phone": "2125552323"
+          }
+        ],
+        "speciality": ["Ophthalmology"],
         "accepting": "accepting",
         "plans": [
             {
@@ -80,17 +91,19 @@
         ]
     },
     {
-        "npi": "1234567890123949",
+        "npi": "1234567891",
         "type": "FACILITY",
         "facility_name": "New York City Hospital",
-        "facility_type": "Hospital",
-        "address": {
+        "facility_type": ["Hospital"],
+        "addresses": [
+          {
             "address": "123 W. 34th St",
             "city": "New York",
             "state": "NY",
-            "zip": "10003"
-        },
-        "phone": "2025552424",
+            "zip": "10003",
+            "phone": "2125552424"
+          }
+        ],
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
