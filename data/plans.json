@@ -14,27 +14,48 @@
                 "network_tier": "NON-PREFERRED"
             }
         ],
-        "formulary":
-        {
-          "drug_tier": "GENERIC",
-          "mail_order": true,
-          "cost_sharing": [
-              {
-                  "pharmacy_type": "1-MONTH-IN-RETAIL",
-                  "copay_amount": 20.0,
-                  "copay_opt": "AFTER-DEDUCTIBLE",
-                  "coinsurance_rate": 0.10,
-                  "coinsurance_opt": "BEFORE-DEDUCTIBLE"
-              },
-              {
-                  "pharmacy_type": "1-MONTH-IN-MAIL",
-                  "copay_amount": 0.0,
-                  "copay_opt": "NO-CHARGE",
-                  "coinsurance_rate": 0.20,
-                  "coinsurance_opt": null
-              }
-          ]
-        },
+        "formulary": [
+          {
+            "drug_tier": "GENERIC",
+            "mail_order": true,
+            "cost_sharing": [
+                {
+                    "pharmacy_type": "1-MONTH-IN-RETAIL",
+                    "copay_amount": 20.0,
+                    "copay_opt": "AFTER-DEDUCTIBLE",
+                    "coinsurance_rate": 0.10,
+                    "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                },
+                {
+                    "pharmacy_type": "1-MONTH-IN-MAIL",
+                    "copay_amount": 0.0,
+                    "copay_opt": "NO-CHARGE",
+                    "coinsurance_rate": 0.20,
+                    "coinsurance_opt": null
+                }
+            ]
+          },
+          {
+            "drug_tier": "PREFERRED",
+            "mail_order": true,
+            "cost_sharing": [
+                {
+                    "pharmacy_type": "1-MONTH-IN-RETAIL",
+                    "copay_amount": 20.0,
+                    "copay_opt": "AFTER-DEDUCTIBLE",
+                    "coinsurance_rate": 0.10,
+                    "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+                },
+                {
+                    "pharmacy_type": "1-MONTH-IN-MAIL",
+                    "copay_amount": 0.0,
+                    "copay_opt": "NO-CHARGE",
+                    "coinsurance_rate": 0.20,
+                    "coinsurance_opt": null
+                }
+            ]
+          }
+        ],
         "last_updated_on": "2015-06-12"
     },
     {

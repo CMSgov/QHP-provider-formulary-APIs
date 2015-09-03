@@ -14,14 +14,14 @@ All information must be described in the JSON file format. JSON is a lightweight
 Public Discoverability
 ----------------------
 
-Organizations must post their `index.json`, `plans.json`, `providers.json`, and `drugs.json` files on a website, accessible to the public. 
+Organizations must post their `index.json`, `plans.json`, `providers.json`, and `drugs.json` files on a website, accessible to the public.
 
 The JSON URLs listed above *must* be provided over HTTPS to ensure the integrity of the data.
 
 Data types
 ----------
 
-All values in the JSON are strings, unless otherwise noted in the `Definition` field. 
+All values in the JSON are strings, unless otherwise noted in the `Definition` field.
 
 Dates should be strings, in ISO 8601 format (e.g. YYYY-MM-DD).
 
@@ -45,7 +45,7 @@ Health Plans - plans.json
 | **formulary_url**  | URL for Formulary              | The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.                    | No       |
 | **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | Yes   |
 | **network**         | Network                        | Array of networks                                                                                                    | Yes   |
-| **formulary**       | Formulary                    | The formulary associated with this plan.                                         | Yes   |
+| **formulary**       | Formulary                    | A list of formularies or a single formulary associated with this plan.  Both a list of formularies or a single formulary are valid.                                         | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
 | **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
@@ -90,7 +90,7 @@ For example, many health plans are offering telemedicine as an additional health
 | **telemedicine** | Offers Telemedicine | Does the plan cover telemedicine? Boolean (values should be either `true` or `false`) | No   |
 
 
-### Example 
+### Example
 
 ```
 [
@@ -110,26 +110,48 @@ For example, many health plans are offering telemedicine as an additional health
                 "network_tier": "NON-PREFERRED"
             }
         ],
-        "formulary": {
-          "drug_tier": "BASIC",
-          "mail_order": true,
-          "cost_sharing": [
-            {
-              "pharmacy_type": "1-MONTH-IN-RETAIL",
-              "copay_amount": 20.0,
-              "copay_opt": "AFTER-DEDUCTIBLE",
-              "coinsurance_rate": 0.10,
-              "coinsurance_opt": "BEFORE-DEDUCTIBLE"
-            },
-            {
-              "pharmacy_type": "1-MONTH-IN-MAIL",
-              "copay_amount": 0.0,
-              "copay_opt": "NO-CHARGE",
-              "coinsurance_rate": 0.20,
-              "coinsurance_opt": null
-            }
-          ]
-        },
+        "formulary": [
+          {
+            "drug_tier": "BASIC",
+            "mail_order": true,
+            "cost_sharing": [
+              {
+                "pharmacy_type": "1-MONTH-IN-RETAIL",
+                "copay_amount": 20.0,
+                "copay_opt": "AFTER-DEDUCTIBLE",
+                "coinsurance_rate": 0.10,
+                "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+              },
+              {
+                "pharmacy_type": "1-MONTH-IN-MAIL",
+                "copay_amount": 0.0,
+                "copay_opt": "NO-CHARGE",
+                "coinsurance_rate": 0.20,
+                "coinsurance_opt": null
+              }
+            ]
+          },
+          {
+            "drug_tier": "PREFERRED",
+            "mail_order": true,
+            "cost_sharing": [
+              {
+                "pharmacy_type": "1-MONTH-IN-RETAIL",
+                "copay_amount": 20.0,
+                "copay_opt": "AFTER-DEDUCTIBLE",
+                "coinsurance_rate": 0.10,
+                "coinsurance_opt": "BEFORE-DEDUCTIBLE"
+              },
+              {
+                "pharmacy_type": "1-MONTH-IN-MAIL",
+                "copay_amount": 0.0,
+                "copay_opt": "NO-CHARGE",
+                "coinsurance_rate": 0.20,
+                "coinsurance_opt": null
+              }
+            ]
+          },
+        ],
         "last_updated_on": "2015-03-17"
     }
 ]
