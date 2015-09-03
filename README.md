@@ -150,7 +150,7 @@ For example, many health plans are offering telemedicine as an additional health
                 "coinsurance_opt": null
               }
             ]
-          },
+          }
         ],
         "last_updated_on": "2015-03-17"
     }
