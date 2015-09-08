@@ -203,7 +203,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
 | -----             | -----              | ----------                                        | -------- |
 | **facility_name** | Facility Name      | -                                                 | Yes |
 | **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
-| **addresses**     | Address            | List of addresses for this facility (Limit 1)     | Yes |
+| **addresses**     | Address            | List of addresses for this facility               | Yes |
 | ***address***     | Street Address     | -                                                 | Yes |
 | ***address_2***   | Street Address 2   | -                                                 | No  |
 | ***city***        | City               | -                                                 | Yes |
