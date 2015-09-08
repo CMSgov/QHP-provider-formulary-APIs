@@ -249,9 +249,9 @@ If the entry is for a `FACILITY` then the following fields should be present:
             "state": "AR",
             "zip": "72201",
             "phone": "2025551212"
-          },
+          }
         ],
-        "specialty": ["Ophthalmology", "Endocrinology"],
+        "speciality": ["Ophthalmology", "Endocrinology"],
         "accepting": "accepting",
         "plans": [
             {
@@ -348,7 +348,7 @@ Drugs - drugs.json
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
-                "plan_id": "56748XXX123933",
+                "plan_id": "12345XX9876546",
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
@@ -370,7 +370,7 @@ Drugs - drugs.json
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
-                "plan_id": "56748XXX123933",
+                "plan_id": "12345XX9876546",
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
