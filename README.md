@@ -41,7 +41,7 @@ Health Plans - plans.json
 | **plan_id**         | Unique Identifier              | The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)           | Yes   |
 | **marketing_name**  | Marketing Name                 | The name of the plan as it is displayed on HealthCare.gov                                                            | Yes   |
 | **summary_url**     | URL for Plan Information       | The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation. | Yes   |
-| **marketing_url**   | URL for Plan Information       | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.                    | Yes       |
+| **marketing_url**   | URL for Plan Information       | The URL that goes directly to the plan brochure for the specific standard plan or plan variation.                    | No       |
 | **formulary_url**  | URL for Formulary              | The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.                    | No       |
 | **plan_contact**    | Contact Email Address for Plan | An email address for developers/public to report mistakes in the network and formulary data.                         | Yes   |
 | **network**         | Network                        | Array of networks                                                                                                    | Yes   |
@@ -195,7 +195,7 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | **speciality**  | Specialty Type     | An array of speciality types. Free form text field.               | Yes |
 | **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | Yes |
 | **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
-| **languages**   | Languages Spoken   | An array of the languages spoken                                  | Yes |
+| **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
 
 If the entry is for a `FACILITY` then the following fields should be present:
 
