@@ -17,7 +17,7 @@ http://example-issuer.com/cms-data-index.json
 This standard does not provide guidance on the use of `https` vs. `http` for
 a scheme: either or both are valid for the purposes of the index document's URL.
 
-This standard does not provide guidance on the MIME media type the docuemnt
+This standard does not provide guidance on the MIME media type the document
 shall be served as. According to RFC 4627, the media type for JSON text is
 `application/json`.
 
