@@ -17,8 +17,7 @@
             "items": {
                 "type": "string",
                 "format": "uri"
-            },
-            "minItems": 1
+            }
         },
         "plan_urls": {
             "type": "array",
