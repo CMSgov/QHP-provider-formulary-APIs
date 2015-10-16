@@ -29,7 +29,7 @@ The schema of the index document is as follows:
 | Field | Description | Required? |
 | ----- | ----------- | --------- |
 | provider_urls | An array of URLs of JSON files that conform to the provider schema, minimum of 1 required | Required |
-| formulary_urls | An array of URLs of JSON files that conform to the formulary schema, minimum of 1 required | Required |
+| formulary_urls | An array of URLs of JSON files that conform to the formulary schema | Required |
 | plan_urls | An array of URLs of JSON files that conform to the plans schema, minimum of 1 required | Required |
 
 ### Example
