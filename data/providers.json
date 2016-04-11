@@ -17,7 +17,7 @@
             "phone": "2125551212"
           }
         ],
-        "speciality": ["Dermatology", "Oncology"],
+        "specialty": ["Dermatology", "Oncology"],
         "accepting": "not accepting",
         "plans": [
             {
@@ -65,7 +65,7 @@
             "phone": "2125552323"
           }
         ],
-        "speciality": ["Ophthalmology"],
+        "specialty": ["Ophthalmology"],
         "accepting": "accepting",
         "plans": [
             {

@@ -192,7 +192,7 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | ***state***     | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)                      | Yes   |
 | ***zip***       | Zip Code           | Five digit zip code, represented as a string                      | Yes   |
 | ***phone***     | Phone Number       | Phone number for this address, represented as a string of numbers | Yes |
-| **speciality**  | Specialty Type     | An array of speciality types. Free form text field.               | Yes |
+| **specialty**  | Specialty Type     | An array of specialty types. Free form text field.               | Yes |
 | **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | Yes |
 | **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
 | **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
@@ -251,7 +251,7 @@ If the entry is for a `FACILITY` then the following fields should be present:
             "phone": "2025551212"
           }
         ],
-        "speciality": ["Ophthalmology", "Endocrinology"],
+        "specialty": ["Ophthalmology", "Endocrinology"],
         "accepting": "accepting",
         "plans": [
             {
