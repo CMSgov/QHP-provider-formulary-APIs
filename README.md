@@ -171,7 +171,7 @@ If a provider has more than one NPI number, please create separate entries for e
 | Field               | Label                | Definition                                                                                                              | Required |
 | -----               | -----                | ----------                                                                                                              | -------- |
 | **npi**             | National Provider ID | The 10-digit National Provider Identifier (NPI) is a unique identification number for covered health care providers              | Yes   |
-| **type**            | Type                 | `INDIVIDUAL`, `FACILITY`, or `GROUP`                                                                                    | Yes   |
+| **type**            | Type                 | One of: `INDIVIDUAL`, `FACILITY`, or `GROUP`. For reference, `INDIVIDUAL` maps to [NPI type 1](https://nppes.cms.hhs.gov/NPPES/Help.do?topic=SelectEntity), while `FACILITY` and `GROUP` correspond with [NPI type 2](https://nppes.cms.hhs.gov/NPPES/Help.do?topic=SelectEntity). | Yes   |
 | **plans**           | Plans                | Array of plans that cover this provider (see "Plans sub-type" below)                                                    | Yes   |
 | **last_updated_on** | Last Updated On      | Date of when the record for this provider has been last updated or refreshed - ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
