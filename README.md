@@ -171,11 +171,11 @@ If a provider has more than one NPI number, please create separate entries for e
 | Field               | Label                | Definition                                                                                                              | Required |
 | -----               | -----                | ----------                                                                                                              | -------- |
 | **npi**             | National Provider ID | The 10-digit National Provider Identifier (NPI) is a unique identification number for covered health care providers              | Yes   |
-| **type**            | Type                 | Specify if `INDIVIDUAL` or `FACILITY`                                                                                   | Yes   |
+| **type**            | Type                 | `INDIVIDUAL`, `FACILITY`, or `GROUP`                                                                                    | Yes   |
 | **plans**           | Plans                | Array of plans that cover this provider (see "Plans sub-type" below)                                                    | Yes   |
 | **last_updated_on** | Last Updated On      | Date of when the record for this provider has been last updated or refreshed - ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
 
-If the entry is for an `INDIVIDUAL` then the following fields should be present:
+If the entry has `INDIVIDUAL` type, then the following fields should be present:
 
 | Field           | Label              | Definition                                                        | Required |
 | -----           | -----              | ----------                                                        | -------- |
@@ -192,16 +192,30 @@ If the entry is for an `INDIVIDUAL` then the following fields should be present:
 | ***state***     | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)                      | Yes   |
 | ***zip***       | Zip Code           | Five digit zip code, represented as a string                      | Yes   |
 | ***phone***     | Phone Number       | Phone number for this address, represented as a string of numbers | Yes |
-| **specialty**  | Specialty Type     | An array of specialty types. Free form text field.               | Yes |
+| **specialty**   | Specialty Type     | An array of specialty types. Free form text field.               | Yes |
 | **accepting**   | Accepting Patients | Is the provider accepting new patients? One of three values: `accepting`, `not accepting`, `accepting in some locations` | Yes |
 | **gender**      | Gender             | Values: `Male`, `Female`, `Other`                                 | No |
 | **languages**   | Languages Spoken   | An array of the languages spoken                                  | No |
 
-If the entry is for a `FACILITY` then the following fields should be present:
+If the entry has `FACILITY` type, then the following fields should be present:
 
 | Field             | Label              | Definition                                        | Required |
 | -----             | -----              | ----------                                        | -------- |
 | **facility_name** | Facility Name      | -                                                 | Yes |
+| **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
+| **addresses**     | Address            | List of addresses for this facility               | Yes |
+| ***address***     | Street Address     | -                                                 | Yes |
+| ***address_2***   | Street Address 2   | -                                                 | No  |
+| ***city***        | City               | -                                                 | Yes |
+| ***state***       | State Abbreviation | Two letter state abbreviation (FL, IA, etc.)      | Yes |
+| ***zip***         | Zip Code           | Five digit zip code, represented as a string      | Yes |
+| ***phone***       | Phone Number       | Phone number for this address, string             | Yes  |
+
+If the entry has `GROUP` type, then the following fields should be present:
+
+| Field             | Label              | Definition                                        | Required |
+| -----             | -----              | ----------                                        | -------- |
+| **group_name**    | Group Practice Name | -                                                | Yes |
 | **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
 | **addresses**     | Address            | List of addresses for this facility               | Yes |
 | ***address***     | Street Address     | -                                                 | Yes |

@@ -116,5 +116,31 @@
                 "network_tier": "NON-PREFERRED"
             }
         ]
+    },
+    {
+        "npi": "1234567890",
+        "type": "GROUP",
+        "group_name": "Smith Brothers Group Practice",
+        "addresses": [
+          {
+            "address": "2560 N Kedzie Ave",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "60647",
+            "phone": "7735551515"
+          }
+        ],
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "PREFERRED"
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "NON-PREFERRED"
+            }
+        ]
     }
 ]
