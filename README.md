@@ -233,7 +233,7 @@ If the entry has `GROUP` type, then the following fields should be present:
 | ***plan_id_type*** | ID Type           | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                  | Yes   |
 | ***plan_id***      | Unique Identifier | The plan ID that was used in the plans.json as the `plan_id` value. For a Marketplace plan, this must be the 14-digit HIOS plan id. | Yes   |
 | ***network_tier*** | Network Tier      | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase.) Must match a network tier defined in the corresponding plan record in a `plans.json` file. | Yes   |
-
+| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 ### Example
 
@@ -271,12 +271,14 @@ If the entry has `GROUP` type, then the following fields should be present:
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2016]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2016, 2017]
             }
         ],
         "languages": ["English", "Spanish", "Mandarin"],
@@ -302,15 +304,17 @@ If the entry has `GROUP` type, then the following fields should be present:
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2017]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2016]
             }
         ],
-        "last_updated_on": "2015-03-17"
+        "last_updated_on": "2016-04-13"
     }
 ]
 ```
@@ -341,8 +345,7 @@ Drugs - drugs.json
 | ***prior_authorization*** | Prior Authorization Required | Is prior authorization required? - (boolean value: `true` or `false`)                                                                                                                                                                                       | No   |
 | ***step_therapy***        | Step Therapy Required        | Is step therapy required? - (boolean value: `true` or `false`)                                                                                                                                                                                              | No   |
 | ***quantity_limit***      | Quantity Limit               | Is there a quantity limit for this drug? - (boolean value: `true` or `false`)                                                                                                                                                                               | No   |
-
-
+| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 ### Example
 
@@ -358,7 +361,8 @@ Drugs - drugs.json
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2016, 2017]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -366,7 +370,8 @@ Drugs - drugs.json
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2016, 2017]
             }
         ]
     },
@@ -380,7 +385,8 @@ Drugs - drugs.json
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": true
+                "quantity_limit": true,
+                "years": [2016]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -388,7 +394,8 @@ Drugs - drugs.json
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2017]
             }
         ]
     }
