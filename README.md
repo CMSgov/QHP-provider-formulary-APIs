@@ -3,8 +3,13 @@ Developer Documentation
 
 Learn how to describe what providers and drugs are covered by a particular health plan.
 
-JSON
-----
+Transport mechanism - HTTP
+--------------------------
+
+All information must be made available via HTTP.
+
+Content type - JSON
+-------------------
 
 All information must be described in the JSON file format. JSON is a lightweight and simple way to represent machine-readable data. It is quickly becoming the de facto standard for shuttling data across the internet, fueled primarily by the rise of mobile and APIs. Modern programming languages can interpret and produce JSON out of the box.
 
