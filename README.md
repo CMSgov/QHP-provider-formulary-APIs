@@ -285,7 +285,7 @@ If the entry has `GROUP` type, then the following fields should be present:
         "last_updated_on": "2015-03-17"
     },
     {
-        "npi": "1234567893",
+        "npi": "1234567894",
         "type": "FACILITY",
         "facility_name": "Main Street Hospital",
         "facility_type": ["Hospital", "Dialysis"],
@@ -314,6 +314,36 @@ If the entry has `GROUP` type, then the following fields should be present:
             }
         ],
         "last_updated_on": "2016-04-13"
+    },
+    {
+        "npi": "1234567895",
+        "type": "GROUP",
+        "group_name": "North Main Physicians Group",
+        "addresses": [
+          {
+            "address": "234 N Main St",
+            "address_2": "",
+            "city": "Fayetteville",
+            "state": "AR",
+            "zip": "72701",
+            "phone": "2025551313"
+          }
+        ],
+        "plans": [
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "PREFERRED",
+                "years": [2017]
+            },
+            {
+                "plan_id_type": "HIOS-PLAN-ID",
+                "plan_id": "12345XX9876543",
+                "network_tier": "NON-PREFERRED",
+                "years": [2016]
+            }
+        ],
+        "last_updated_on": "2016-05-31"
     }
 ]
 ```
