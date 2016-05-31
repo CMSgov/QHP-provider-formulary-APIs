@@ -216,7 +216,6 @@ If the entry has `GROUP` type, then the following fields should be present:
 | Field             | Label              | Definition                                        | Required |
 | -----             | -----              | ----------                                        | -------- |
 | **group_name**    | Group Practice Name | -                                                | Yes |
-| **facility_type** | Facility Type      | An array of facility types. Free-form text field. | Yes |
 | **addresses**     | Address            | List of addresses for this facility               | Yes |
 | ***address***     | Street Address     | -                                                 | Yes |
 | ***address_2***   | Street Address 2   | -                                                 | No  |
