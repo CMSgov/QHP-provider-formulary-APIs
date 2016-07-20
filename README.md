@@ -48,7 +48,7 @@ Health Plans - plans.json
 | **formulary**       | Formulary                    | A list of formularies or a single formulary associated with this plan.  Both a list of formularies or a single formulary are valid.                                         | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
 | **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
-| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
+| ***years***       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 
 #### Network sub-type
@@ -98,6 +98,7 @@ For example, many health plans are offering telemedicine as an additional health
     {
         "plan_id_type": "HIOS-PLAN-ID",
         "plan_id": "12345XX9876543",
+        "years": [2016, 2017],
         "marketing_name": "Sample Gold Health Plan",
         "summary_url": "http://url/to/summary/benefits/coverage",
         "marketing_url": "http://url/to/health/plan/information",
@@ -233,7 +234,7 @@ If the entry has `GROUP` type, then the following fields should be present:
 | ***plan_id_type*** | ID Type           | Type of Plan ID. For all Marketplace plans this should be: `HIOS-PLAN-ID`                                  | Yes   |
 | ***plan_id***      | Unique Identifier | The plan ID that was used in the plans.json as the `plan_id` value. For a Marketplace plan, this must be the 14-digit HIOS plan id. | Yes   |
 | ***network_tier*** | Network Tier      | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase.) Must match a network tier defined in the corresponding plan record in a `plans.json` file. | Yes   |
-| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
+| ***years***       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 ### Example
 
@@ -375,7 +376,7 @@ Drugs - drugs.json
 | ***prior_authorization*** | Prior Authorization Required | Is prior authorization required? - (boolean value: `true` or `false`)                                                                                                                                                                                       | No   |
 | ***step_therapy***        | Step Therapy Required        | Is step therapy required? - (boolean value: `true` or `false`)                                                                                                                                                                                              | No   |
 | ***quantity_limit***      | Quantity Limit               | Is there a quantity limit for this drug? - (boolean value: `true` or `false`)                                                                                                                                                                               | No   |
-| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
+| ***years***       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 ### Example
 
