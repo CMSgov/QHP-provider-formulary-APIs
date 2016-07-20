@@ -48,6 +48,7 @@ Health Plans - plans.json
 | **formulary**       | Formulary                    | A list of formularies or a single formulary associated with this plan.  Both a list of formularies or a single formulary are valid.                                         | Yes   |
 | **benefits**       | Benefits                    | Array of benefits                                                                                                  | No   |
 | **last_updated_on** | Last Updated On                | ISO 8601 format (e.g. YYYY-MM-DD) | Yes   |
+| ***years****       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
 
 #### Network sub-type
