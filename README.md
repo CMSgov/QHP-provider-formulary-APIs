@@ -91,7 +91,7 @@ For example, many health plans are offering telemedicine as an additional health
 | **telemedicine** | Offers Telemedicine | Does the plan cover telemedicine? Boolean (values should be either `true` or `false`) | No   |
 
 
-### Example
+### Example plans.json
 
 ```
 [
@@ -236,7 +236,7 @@ If the entry has `GROUP` type, then the following fields should be present:
 | ***network_tier*** | Network Tier      | Tier for network (Example Values: `PREFERRED`, `NON-PREFERRED`, etc. Values should be all uppercase.) Must match a network tier defined in the corresponding plan record in a `plans.json` file. | Yes   |
 | ***years***       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
-### Example
+### Example providers.json
 
 ```
 [
@@ -351,7 +351,7 @@ If the entry has `GROUP` type, then the following fields should be present:
 ```
 
 Drugs - drugs.json
-------------------------------
+------------------
 
 ### Description
 
@@ -378,7 +378,7 @@ Drugs - drugs.json
 | ***quantity_limit***      | Quantity Limit               | Is there a quantity limit for this drug? - (boolean value: `true` or `false`)                                                                                                                                                                               | No   |
 | ***years***       | Years             | An array of years for which the plan is offered on the marketplace (eg., 2016, 2017). | Yes |
 
-### Example
+### Example drugs.json
 
 ```
 [
