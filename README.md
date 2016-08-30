@@ -77,7 +77,7 @@ This type defines a formulary within a plan. The values should be something that
 | **copay_amount**     | Copay amount       | Amount of copay, in $ (number)                                                                                                                                                                     | Yes   |
 | **copay_opt**        | Copay option       | Qualifier of copay amount (Values: `AFTER-DEDUCTIBLE`, `BEFORE-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`                                                                              | Yes   |
 | **coinsurance_rate** | Coinsurance rate   | Rate of coinsurance (float, 0.0 to 1.0)                                                                                                                                                            | Yes   |
-| **coinsurance_opt**  | Coinsurance option | Qualifier for coinsurance rate (Values: `AFTER-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`)                                                                                             | Yes   |
+| **coinsurance_opt**  | Coinsurance option | Qualifier for coinsurance rate (Values: `AFTER-DEDUCTIBLE`, `BEFORE-DEDUCTIBLE`, `NO-CHARGE`, `NO-CHARGE-AFTER-DEDUCTIBLE`)                                                                                             | Yes   |
 
 
 #### Benefits sub-type
