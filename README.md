@@ -1,3 +1,13 @@
+Overview
+========
+
+This respository contains a set of schemas describing a data format (encoded as JSON) that lists which health care providers and drug formularies are covered by Qualified Health Plans (QHPs) on the [federal health insurance marketplace](https://healthcare.gov/).
+
+Background
+==========
+
+Beginning in 2015, CMS and health insurance carriers worked together to define a schema for sharing data in a machine-readable format of health care providers and drug formularies covered by Qualified Health Plans (QHPs) on the federal health insurance marketplace. Carriers host JSON files for their plans so that this information can be gathered, indexed, and made available to consumers to help inform their plan selection.
+
 Developer Documentation
 =======================
 
