@@ -6,6 +6,7 @@
         "summary_url": "https://www.vandelay.co/plans/gold/summary",
         "marketing_url": "https://www.vandelay.co/plans/gold",
         "plan_contact": "art@vandelay.co",
+        "years": [2020],
         "network": [
             {
                 "network_tier": "PREFERRED"
@@ -65,6 +66,7 @@
         "summary_url": "https://www.vandelay.co/plans/silver/summary",
         "marketing_url": "https://www.vandelay.co/plans/silver",
         "plan_contact": "art@vandelay.co",
+        "years": [2020],
         "network": [
             {
                 "network_tier": "PREFERRED"
@@ -103,6 +105,7 @@
         "summary_url": "https://www.vandelay.co/plans/bronze/summary",
         "marketing_url": "https://www.vandelay.co/plans/bronze",
         "plan_contact": "art@vandelay.co",
+        "years": [2020],
         "network": [
             {
                 "network_tier": "PREFERRED"
