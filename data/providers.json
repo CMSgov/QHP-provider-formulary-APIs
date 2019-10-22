@@ -17,28 +17,33 @@
             "phone": "2125551212"
           }
         ],
-        "speciality": ["Dermatology", "Oncology"],
+        "specialty": ["Dermatology", "Oncology"],
         "accepting": "not accepting",
+        "last_updated_on": "2019-01-01",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876542",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876542",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2019, 2020]
             }
         ]
     },
@@ -65,28 +70,33 @@
             "phone": "2125552323"
           }
         ],
-        "speciality": ["Ophthalmology"],
+        "specialty": ["Ophthalmology"],
         "accepting": "accepting",
+        "last_updated_on": "2019-01-01",
         "plans": [
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876542",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876542",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876541",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876541",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2019, 2020]
             }
         ]
     },
@@ -95,6 +105,7 @@
         "type": "FACILITY",
         "facility_name": "New York City Hospital",
         "facility_type": ["Hospital"],
+        "last_updated_on": "2019-01-01",
         "addresses": [
           {
             "address": "123 W. 34th St",
@@ -108,12 +119,14 @@
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "PREFERRED"
+                "network_tier": "PREFERRED",
+                "years": [2019, 2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
                 "plan_id": "12345XX9876543",
-                "network_tier": "NON-PREFERRED"
+                "network_tier": "NON-PREFERRED",
+                "years": [2019, 2020]
             }
         ]
     }

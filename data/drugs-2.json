@@ -9,7 +9,8 @@
                 "drug_tier": "BRAND",
                 "prior_authorization": true,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -17,7 +18,8 @@
                 "drug_tier": "BRAND",
                 "prior_authorization": true,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -25,7 +27,8 @@
                 "drug_tier": "BRAND",
                 "prior_authorization": true,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2020]
             }
         ]
     },
@@ -39,7 +42,8 @@
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": true
+                "quantity_limit": true,
+                "years": [2020]
             },
             {
                 "plan_id_type": "HIOS-PLAN-ID",
@@ -47,7 +51,8 @@
                 "drug_tier": "GENERIC",
                 "prior_authorization": false,
                 "step_therapy": false,
-                "quantity_limit": false
+                "quantity_limit": false,
+                "years": [2020]
             }
         ]
     }
